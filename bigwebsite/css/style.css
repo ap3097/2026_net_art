@@ -1,0 +1,656 @@
+/* =========================================
+   THE VERY BIG INTERNET
+   External CSS stylesheet
+   ========================================= */
+
+
+/* BASIC PAGE SETUP */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    background-color: #111111;
+    color: #eeeeee;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    overflow: auto;
+}
+
+
+/* =========================================
+   GIANT WEBSITE
+   ========================================= */
+
+#giant-canvas {
+
+    position: relative;
+
+    width: 2400px;
+    min-width: 2400px;
+
+    height: 2400px;
+    min-height: 2400px;
+
+    background-color: #111111;
+
+    border: 10px solid #eeeeee;
+
+}
+
+
+/* =========================================
+   TITLE
+   ========================================= */
+
+.title-area {
+
+    position: absolute;
+
+    top: 100px;
+    left: 150px;
+
+    width: 900px;
+
+    padding: 40px;
+
+    border: 2px solid #eeeeee;
+
+    background-color: #171717;
+}
+
+
+.tiny-label {
+
+    font-size: 12px;
+
+    font-family: "Courier New", monospace;
+
+    letter-spacing: 4px;
+
+    color: #ff3333;
+}
+
+
+h1 {
+
+    font-size: 100px;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-weight: 900;
+
+    line-height: 0.85;
+
+    text-align: left;
+
+    margin: 30px 0;
+
+    color: #ffffff;
+}
+
+
+.red-text {
+
+    color: #ff3333;
+
+    font-style: italic;
+}
+
+
+.subtitle {
+
+    font-size: 20px;
+
+    font-family: "Courier New", monospace;
+
+    color: #aaaaaa;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   IMAGE
+   ========================================= */
+
+.space-image {
+
+    position: absolute;
+
+    top: 100px;
+    left: 1250px;
+
+    width: 700px;
+    height: 500px;
+
+    object-fit: cover;
+
+    border: 8px solid white;
+
+    opacity: 0.85;
+}
+
+
+/* =========================================
+   INTRODUCTION
+   ========================================= */
+
+#introduction {
+
+    position: absolute;
+
+    top: 700px;
+    left: 250px;
+
+    width: 450px;
+
+    padding: 40px;
+
+    background-color: #eeeeee;
+
+    color: #111111;
+
+    border: 5px solid #ff3333;
+}
+
+
+#introduction h2 {
+
+    font-size: 45px;
+
+    font-weight: 900;
+
+    margin-top: 0;
+}
+
+
+#introduction p {
+
+    font-size: 20px;
+
+    line-height: 1.5;
+
+    font-family: Georgia, serif;
+}
+
+
+.highlight {
+
+    color: #ff3333;
+
+    font-weight: bold;
+
+    text-decoration: underline;
+}
+
+
+.small-note {
+
+    opacity: 0.5;
+
+    font-size: 13px !important;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+.weird-nav {
+
+    position: absolute;
+
+    top: 650px;
+    left: 1100px;
+
+    width: 500px;
+
+    padding: 25px;
+
+    border: 2px dashed #ff3333;
+
+    background-color: #222222;
+}
+
+
+.weird-nav a {
+
+    display: inline-block;
+
+    margin: 10px;
+
+    padding: 12px 18px;
+
+    color: #ffffff;
+
+    background-color: #333333;
+
+    border: 1px solid #ffffff;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.weird-nav a:hover {
+
+    color: #111111;
+
+    background-color: #ff3333;
+
+    border-color: #ff3333;
+}
+
+
+/* =========================================
+   FLOATING WORDS
+   ========================================= */
+
+.floating-text {
+
+    position: absolute;
+
+    font-family: "Courier New", monospace;
+
+    font-weight: bold;
+
+    color: #ff3333;
+
+    opacity: 0.8;
+
+}
+
+
+.one {
+
+    top: 550px;
+
+    left: 70px;
+
+    transform: rotate(-90deg);
+}
+
+
+.two {
+
+    top: 1000px;
+
+    left: 2050px;
+
+    transform: rotate(90deg);
+}
+
+
+.three {
+
+    top: 1450px;
+
+    left: 100px;
+
+    font-size: 30px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   RED BOX
+   ========================================= */
+
+.red-box {
+
+    position: absolute;
+
+    top: 1100px;
+    left: 850px;
+
+    width: 500px;
+    height: 300px;
+
+    padding: 50px;
+
+    box-sizing: border-box;
+
+    background-color: #ff3333;
+
+    color: #111111;
+
+    border: 10px solid #ffffff;
+
+    text-align: center;
+
+    font-size: 40px;
+
+    font-weight: 900;
+}
+
+
+/* =========================================
+   SECRET CARDS
+   ========================================= */
+
+.secret-card {
+
+    position: absolute;
+
+    top: 1500px;
+    left: 250px;
+
+    width: 500px;
+
+    padding: 50px;
+
+    background-color: #222222;
+
+    border: 3px solid #ffffff;
+
+}
+
+
+.secret-card h2 {
+
+    font-size: 45px;
+
+    margin-top: 10px;
+}
+
+
+.secret-card p {
+
+    font-size: 19px;
+
+    line-height: 1.6;
+}
+
+
+.secret-number {
+
+    color: #ff3333;
+
+    font-size: 60px !important;
+
+    font-weight: 900;
+
+    margin: 0;
+}
+
+
+.secret-word {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 15px;
+
+    color: #111111;
+
+    background-color: #ffffff;
+
+    font-family: "Courier New", monospace;
+
+    font-weight: bold;
+
+    text-decoration: underline;
+}
+
+
+.second {
+
+    top: 1500px;
+
+    left: 1200px;
+
+    border-color: #ff3333;
+
+}
+
+
+/* =========================================
+   FAKE IMAGE / ARTWORK
+   ========================================= */
+
+.fake-image {
+
+    position: absolute;
+
+    top: 900px;
+
+    left: 1750px;
+
+    width: 400px;
+
+    height: 400px;
+
+    overflow: hidden;
+
+    background-color: #330033;
+
+    border: 5px solid #ffffff;
+}
+
+
+.fake-image p {
+
+    position: absolute;
+
+    bottom: 20px;
+
+    left: 20px;
+
+    font-family: "Courier New", monospace;
+
+    color: white;
+
+    font-size: 12px;
+}
+
+
+.fake-sun {
+
+    position: absolute;
+
+    width: 180px;
+
+    height: 180px;
+
+    border-radius: 50%;
+
+    background-color: #ff3333;
+
+    top: 70px;
+
+    left: 110px;
+
+    opacity: 0.8;
+}
+
+
+.fake-moon {
+
+    position: absolute;
+
+    width: 100px;
+
+    height: 100px;
+
+    border-radius: 50%;
+
+    background-color: #ffffff;
+
+    top: 140px;
+
+    left: 220px;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   TYPE WALL
+   ========================================= */
+
+.type-wall {
+
+    position: absolute;
+
+    top: 1900px;
+
+    left: 150px;
+
+    width: 700px;
+
+    padding: 30px;
+
+    border: 1px solid #444444;
+
+}
+
+
+.type-wall p {
+
+    display: inline-block;
+
+    margin: 10px;
+
+    font-size: 25px;
+
+    color: #ffffff;
+
+    text-decoration: line-through;
+}
+
+
+.type-wall p:hover {
+
+    color: #ff3333;
+
+    text-decoration: none;
+}
+
+
+/* =========================================
+   GIANT TYPOGRAPHY
+   ========================================= */
+
+.giant-message {
+
+    position: absolute;
+
+    top: 1850px;
+
+    left: 1100px;
+
+    width: 850px;
+
+    text-align: center;
+
+    font-size: 90px;
+
+    font-weight: 900;
+
+    line-height: 0.7;
+}
+
+
+.giant-message p {
+
+    margin: 25px;
+}
+
+
+.outline {
+
+    color: transparent;
+
+    -webkit-text-stroke: 2px #ff3333;
+
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   TINY SECRET
+   ========================================= */
+
+.tiny-secret {
+
+    position: absolute;
+
+    top: 2250px;
+
+    left: 2200px;
+
+    width: 150px;
+
+    font-family: "Courier New", monospace;
+
+    font-size: 10px;
+
+    color: #555555;
+
+    opacity: 0.5;
+}
+
+
+/* =========================================
+   FINAL MESSAGE
+   ========================================= */
+
+#final-message {
+
+    position: absolute;
+
+    top: 2100px;
+
+    left: 200px;
+
+    width: 800px;
+
+    padding: 50px;
+
+    background-color: #eeeeee;
+
+    color: #111111;
+
+    border: 10px solid #ff3333;
+
+    text-align: center;
+}
+
+
+#final-message h2 {
+
+    font-size: 70px;
+
+    font-weight: 900;
+
+    margin: 0 0 20px 0;
+}
+
+
+#final-message p {
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+}
+
+
+.footer-mark {
+
+    font-family: "Courier New", monospace !important;
+
+    font-size: 12px !important;
+
+    letter-spacing: 5px;
+
+    opacity: 0.6;
+}
