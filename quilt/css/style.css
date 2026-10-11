@@ -1,0 +1,30 @@
+/* Optical Quilt — CSS Grid layout with six unique tile styles */
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; min-height: 100%; }
+
+.quilt {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: #161629;
+  gap: 3px;
+  padding: 3px;
+}
+.tile { min-width: 0; min-height: 0; }
+
+/* Each class creates a different visual pattern. */
+.a { background: repeating-linear-gradient(45deg, #ffcc33 0 12px, #191736 12px 24px); }
+.b { background: repeating-linear-gradient(-45deg, #ff477e 0 12px, #191736 12px 24px); }
+.c { background: conic-gradient(from 45deg, #37e3db 0 25%, #17162f 0 50%, #37e3db 0 75%, #17162f 0); background-size: 44px 44px; }
+.d { background: repeating-linear-gradient(90deg, #8d62ef 0 14px, #f7f2da 14px 28px); }
+.e { background: radial-gradient(circle, #ffcc33 0 26%, #17162f 27% 46%, #ffcc33 47% 62%, #17162f 63%); }
+.f { background: conic-gradient(#f7f2da 0 25%, #ff477e 0 50%, #f7f2da 0 75%, #ff477e 0); background-size: 44px 44px; }
+
+/* Keep all 48 tiles visible in a full-screen grid on smaller screens. */
+@media (max-width: 600px) {
+  .quilt { grid-template-columns: repeat(6, 1fr); grid-template-rows: repeat(8, 1fr); }
+  .a, .b { background-size: 34px 34px; }
+}
