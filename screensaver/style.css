@@ -1,0 +1,52 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; width: 100%; min-height: 100%; }
+body { font-family: Arial, Helvetica, sans-serif; background: #070b1e; color: white; }
+.scene {
+  position: relative; display: grid; place-items: center; isolation: isolate;
+  min-height: 100svh; width: 100%; overflow: hidden; outline: none; cursor: crosshair;
+  background: radial-gradient(circle at center, #24305f 0%, #111a39 35%, #080d23 72%, #040613 100%);
+  transition: background-color 1s ease, filter 1s ease;
+}
+.stars {
+  position: absolute; inset: 0; opacity: .45; pointer-events: none;
+  background-image: radial-gradient(2px 2px at 10% 20%, #fff 99%, transparent),
+    radial-gradient(2px 2px at 78% 23%, #fff 99%, transparent),
+    radial-gradient(3px 3px at 85% 75%, #fff 99%, transparent),
+    radial-gradient(2px 2px at 20% 84%, #fff 99%, transparent),
+    radial-gradient(2px 2px at 47% 9%, #fff 99%, transparent),
+    radial-gradient(2px 2px at 57% 88%, #fff 99%, transparent),
+    radial-gradient(2px 2px at 92% 45%, #fff 99%, transparent),
+    radial-gradient(2px 2px at 7% 56%, #fff 99%, transparent);
+  transition: opacity 1s ease;
+}
+.glow { position: absolute; width: min(72vw, 680px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, #b584df30 0%, #8461d512 45%, transparent 70%); filter: blur(12px); opacity: .4; transition: opacity 1s ease, transform 1s ease; }
+.sun { position: absolute; width: clamp(75px, 11vw, 145px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fff9cb, #ffcc70 37%, #fb7c89 78%, #db4384); box-shadow: 0 0 55px #ffa4a57d, 0 0 150px #ff7a7e39; z-index: 2; transition: transform 1s ease, box-shadow 1s ease; }
+.orbit { position: absolute; width: var(--orbit-size); aspect-ratio: 1; border: 1px solid #b5d6ff27; border-radius: 50%; transform: rotate(var(--angle)); transition: border-color .8s ease; }
+.orbit-one { --orbit-size: min(38vw, 340px); --angle: 35deg; --duration: 9s; }
+.orbit-two { --orbit-size: min(60vw, 540px); --angle: 125deg; --duration: 15s; }
+.orbit-three { --orbit-size: min(82vw, 740px); --angle: 235deg; --duration: 23s; }
+.planet { position: absolute; left: 50%; top: 0; transform: translate(-50%, -50%); border-radius: 50%; }
+.planet-one { width: clamp(18px, 3vw, 32px); aspect-ratio: 1; background: radial-gradient(circle at 30% 25%, #d6ffff, #39d8df 60%, #1479a8); box-shadow: 0 0 24px #30dbef91; }
+.planet-two { width: clamp(28px, 4vw, 47px); aspect-ratio: 1; background: radial-gradient(circle at 30% 25%, #ffdfca, #e795cd 60%, #9e4fba); box-shadow: 0 0 27px #f88de278; }
+.planet-three { width: clamp(22px, 3.3vw, 38px); aspect-ratio: 1; background: radial-gradient(circle at 30% 25%, #fff7ae, #f6ae61 65%, #bf5f6d); box-shadow: 0 0 24px #ffc46b80; }
+.intro { position: absolute; z-index: 4; width: 100%; text-align: center; top: 8%; padding: 0 15px; pointer-events: none; transition: opacity .8s ease, transform .8s ease; }
+.eyebrow { color: #aabde8; letter-spacing: .35em; font-size: 10px; font-weight: bold; }
+h1 { font-size: clamp(32px, 6vw, 68px); font-weight: 300; letter-spacing: .075em; margin: 10px 0; }
+.instruction, .touch-instruction { color: #bac5e7; font-size: 13px; letter-spacing: .07em; }
+.touch-instruction { display: none; }
+.footer { position: absolute; z-index: 4; bottom: 18px; text-align: center; color: #9ba9c8; font-size: 10px; letter-spacing: .18em; padding: 0 15px; }
+.footer span { padding: 0 12px; color: #f8bbce; }
+/* Pseudo-states trigger the continuous keyframe animation. */
+.scene:is(:hover, :focus, :focus-visible) .orbit { animation: revolve var(--duration) linear infinite; border-color: #c9dbff50; }
+.scene:is(:hover, :focus, :focus-visible) .stars { opacity: .95; animation: twinkle 3s ease-in-out infinite alternate; }
+.scene:is(:hover, :focus, :focus-visible) .sun { transform: scale(1.12); box-shadow: 0 0 90px #ffa4a5a8, 0 0 200px #ff7a7e70; }
+.scene:is(:hover, :focus, :focus-visible) .glow { transform: scale(1.15); opacity: 1; }
+.scene:is(:hover, :focus, :focus-visible) .intro { opacity: .35; transform: translateY(-10px); }
+@keyframes revolve { from { transform: rotate(var(--angle)); } to { transform: rotate(calc(var(--angle) + 360deg)); } }
+@keyframes twinkle { from { opacity: .45; } to { opacity: 1; } }
+@media (max-width: 700px) {
+ .orbit-one { --orbit-size: 45vw; } .orbit-two { --orbit-size: 72vw; } .orbit-three { --orbit-size: 96vw; }
+ .intro { top: 12%; } .instruction { display: none; } .touch-instruction { display: block; }
+ .footer { font-size: 8px; line-height: 1.9; }
+}
+@media (prefers-reduced-motion: reduce) { .scene:is(:hover, :focus, :focus-visible) .orbit, .scene:is(:hover, :focus, :focus-visible) .stars { animation: none; } }
